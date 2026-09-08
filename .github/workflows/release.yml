@@ -1,0 +1,67 @@
+name: Release
+
+# Builds the distributable zip when a version tag is pushed and attaches it to
+# a GitHub Release. The zip contains the mod folder and nothing else: ref/,
+# edit/, tools/ and .github/ are never packaged.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  MOD_DIR: Yuran_Fur_Shaved_For_RJW
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: version
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            echo "value=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Sanity check the mod folder
+        run: |
+          test -f "${MOD_DIR}/About/About.xml"
+          test -f "${MOD_DIR}/LoadFolders.xml"
+          echo "textures: $(find "${MOD_DIR}" -name '*.png' | wc -l)"
+
+      - name: Stage the package
+        run: |
+          mkdir -p dist/staging
+          cp -r "${MOD_DIR}" dist/staging/
+          # Ship the licence and notices inside the mod folder too, so a player
+          # who only ever unzips into Mods/ still has them.
+          cp LICENSE THIRD-PARTY-NOTICES.md README.md "dist/staging/${MOD_DIR}/"
+
+      - name: Build the zip
+        id: zip
+        run: |
+          name="${MOD_DIR}-${{ steps.version.outputs.value }}.zip"
+          cd dist/staging
+          zip -r -q "../${name}" "${MOD_DIR}"
+          cd ..
+          echo "name=${name}" >> "$GITHUB_OUTPUT"
+          echo "--- zip contents (top level) ---"
+          unzip -l "${name}" | head -20
+
+      - name: Publish the release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ steps.version.outputs.value }}
+          files: dist/${{ steps.zip.outputs.name }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false

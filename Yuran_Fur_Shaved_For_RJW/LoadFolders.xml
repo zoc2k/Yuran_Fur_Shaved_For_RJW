@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <!-- Each folder is gated on the mods that make its textures reachable, mirroring
+       the conditions the target mods use for their own Yuran folders. -->
+  <v1.5>
+    <li>/</li>
+    <li IfModActive="Hawkeye32.Hawks.Anims">Mods/HawkAnims</li>
+    <li IfModActiveAll="adk.sar.alien,RooAndGloomy.YuranRaceMod">Mods/MultipleRacesSA0</li>
+    <!-- HarRaceOffset has no Yuran leg textures on 1.5, so nothing to override there. -->
+  </v1.5>
+  <v1.6>
+    <li>/</li>
+    <li IfModActive="Hawkeye32.Hawks.Anims">Mods/HawkAnims</li>
+    <li IfModActiveAll="adk.sar.alien,RooAndGloomy.YuranRaceMod">Mods/MultipleRacesSA0</li>
+    <li IfModActiveAll="Talos.RJW.Animations.adjusts.HAR.race.offset,OTYOTY.SizedApparel,RooAndGloomy.YuranRaceMod">Mods/HarRaceOffset</li>
+  </v1.6>
+</loadFolders>

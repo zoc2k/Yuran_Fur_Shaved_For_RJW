@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+*.png binary
+*.psd binary
+*.zip binary
+
+*.xml text eol=lf
+*.md text eol=lf
+*.py text eol=lf

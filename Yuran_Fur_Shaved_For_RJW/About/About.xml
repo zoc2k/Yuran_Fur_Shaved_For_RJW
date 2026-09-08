@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Yuran Fur Shaved For RJW</name>
+  <author>zoc2k</author>
+  <packageId>zoc2k.yuranfurshavedforrjw</packageId>
+  <supportedVersions>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Texture replacement patch for the Yuran race in RJW addon mods. It swaps the fur on Yuran body and genital textures for a shaved variant.
+
+Every target mod is optional. Folders are gated by LoadFolders.xml, so nothing is loaded for a mod you do not have installed, and no error is produced.
+
+Target mods:
+- Rimworld Hawkeye32's RJW Animations (Hawkeye32.Hawks.Anims)
+- Multiple Races SA0 Patch (adk.sar.alien)
+- RJW Animations adjusts HAR race offset (Talos.RJW.Animations.adjusts.HAR.race.offset)
+
+Load order: place this mod below RJW, HAR, the Yuran race mod, Sized Apparel, and all target mods. It contains textures only, so a wrong load order simply means the replacements are not applied.
+
+This mod ships replacement textures only. No original assets from the target mods are redistributed. Unofficial, and not affiliated with the original authors.</description>
+  <modDependencies />
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>erdelf.HumanoidAlienRaces</li>
+    <li>rim.job.world</li>
+    <li>RooAndGloomy.YuranRaceMod</li>
+    <li>OTYOTY.SizedApparel</li>
+    <li>OTYOTY.SizedApparel.extended</li>
+    <li>c0ffee.rimworld.animations</li>
+    <li>Hawkeye32.Hawks.Anims</li>
+    <li>adk.sar.alien</li>
+    <li>Talos.RJW.Animations.adjusts.HAR.race.offset</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,27 @@
+# Upstream mods, kept locally for reference only. Never redistributed.
+ref/
+
+# Source artwork and working files. Only the built mod folder is published.
+edit/
+
+# Image editor working files. The project's own layered source is committed on
+# purpose: under the GPL it is the preferred form for making modifications.
+*.psd
+*.clip
+*.xcf
+*.kra
+!/Yuran_Furshaved_for_RJW.psd
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Build output
+*.zip
+
+# OS cruft
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+._*
