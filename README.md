@@ -72,7 +72,7 @@ RimWorld `Mods` folder.
 
 - THX to all mod creater!
 
-Apart from the three colour masks noted below, this repository contains **only
+This repository contains **only
 original replacement artwork**. No other texture, Def, or asset from the mods
 listed above is redistributed here. You must own and install those mods
 yourself for this patch to do anything.
