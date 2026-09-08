@@ -6,6 +6,12 @@ swaps the fur on Yuran body and genital textures for a shaved variant.
 This mod adds **no gameplay content**: no Defs, no patches, no C# assembly.
 It contains textures and two XML metadata files, nothing else.
 
+##
+If you're using the **Yuran race's facial animations**, we recommend subscribing to “Yuran Furshaved Continue” on the Steam Workshop.
+https://steamcommunity.com/sharedfiles/filedetails/?id=3569887039
+
+This mod does not include textures for facial animations.
+
 ## Supported addon mods
 
 Every target below is **optional**. Folders are gated with `LoadFolders.xml`,
