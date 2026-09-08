@@ -34,24 +34,8 @@ repository.
 
 ## Third-party assets
 
-The following three files are **not** covered by the GPL. They are unmodified
-copies of assets from *RJW Animations adjusts HAR race offset* by **Talos**, and
-are redistributed here with Talos's permission. All rights in them remain with
-their original author.
-
-```
-Yuran_Fur_Shaved_For_RJW/Mods/HarRaceOffset/Textures/Yuran/Yuranlike/Bodies/
-    BlackSnake/RJW_VLegs/Naked_Thin_eastm.png
-    BlackSnake/RJW_VLegs/Naked_Thin_northm.png
-    BlackSnake/RJW_VLegs/Naked_Thin_southm.png
-```
-
-Each is a 256x256 uniform black colour mask. Permission to redistribute them
-does not transfer any right to relicense them, and the grant of permission
-applies to this project only. If you fork this repository or reuse its
-artwork, obtain your own permission from Talos before redistributing these
-three files, or omit them: they are byte-identical to the upstream originals,
-so omitting them produces exactly the same result in game.
+They are modified copies of assets from *RJW Animations adjusts HAR race offset* by **Talos**, *Multiple Races SA0 Patch* by AlexDuKaNa & Ryufais, *Rimworld Hawkeye32's RJW Animations* — Hawkeye32.
+All rights in them remain with their original author.
 
 ## Upstream mods
 
