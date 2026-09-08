@@ -64,16 +64,12 @@ RimWorld `Mods` folder.
 - **AlexDuKaNa, Ryufais** — Multiple Races SA0 Patch
 - **Talos** — RJW Animations adjusts HAR race offset
 
+- THX to all mod creater!
+
 Apart from the three colour masks noted below, this repository contains **only
 original replacement artwork**. No other texture, Def, or asset from the mods
 listed above is redistributed here. You must own and install those mods
 yourself for this patch to do anything.
-
-Three files, the `RJW_VLegs/Naked_Thin_{east,north,south}m.png` BlackSnake
-colour masks, are unmodified copies of Talos's originals, redistributed with
-Talos's permission. They remain the property of their original author and are
-not covered by this project's licence. See
-[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 ## Licence
 
